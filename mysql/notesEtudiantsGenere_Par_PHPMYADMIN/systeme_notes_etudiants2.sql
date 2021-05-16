@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : Dim 16 mai 2021 à 14:12
+-- Généré le : Dim 16 mai 2021 à 15:28
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -50,7 +50,7 @@ INSERT INTO `etudiant` (`numEtudiant`, `nom`, `prenom`, `mail`) VALUES
 ('ETD006', 'CHOURY', 'Alaé', 'a.choury@ludus-academie.com'),
 ('ETD007', 'WILHEIM', 'Stéphane', 's.wilheim@ludus-academie.com'),
 ('ETD008', 'ECKLE', 'Elias', 'e.eckle@ludus-academie.com'),
-('ETD010', 'CHARLES', 'Francois', 'f.charles@gmail.com');
+('ETD009', 'MUSK', 'Elon', 'e.musk@ludus-academie.com');
 
 -- --------------------------------------------------------
 
@@ -74,7 +74,7 @@ INSERT INTO `login` (`mail`, `psswd`, `profil`) VALUES
 ('a.bohnert@ludus-academie.com', 2223, 'etudiant'),
 ('a.choury@ludus-academie.com', 2221, 'etudiant'),
 ('e.eckle@ludus-academie.com', 1112, 'etudiant'),
-('f.charles@gmail.com', 2345, 'etudiant'),
+('e.musk@ludus-academie.com', 9999, 'etudiant'),
 ('g.madembo@ludus-academie.com', 343, 'professeur'),
 ('h.eitel@ludus-academie.com', 432, 'etudiant'),
 ('j.poignard@ludus-academie.com', 4446, 'professeur'),
@@ -188,9 +188,13 @@ INSERT INTO `note` (`idNote`, `sujetNote`, `valeurNote`, `coeffNote`, `numEtudia
 ('N0050', 'arigato', 20, 1, 'ETD002', 'LKD005'),
 ('N0051', 'arigato', 18, 1, 'ETD006', 'LKD005'),
 ('N0052', 'arigato', 20, 1, 'ETD008', 'LKD005'),
-('N0053', 'Level_Design', 15, 1, 'ETD010', 'LKD002'),
 ('N0054', 'arigato', 17, 1, 'ETD005', 'LKD005'),
-('N0055', 'SQL_OMAPIZZA', 20, 1, 'ETD003', 'LKD003');
+('N0055', 'SQL_OMAPIZZA', 20, 1, 'ETD003', 'LKD003'),
+('N0056', 'arigato', 20, 1, 'ETD009', 'LKD005'),
+('N0057', 'evaluation_politesse', 18, 1, 'ETD008', 'LKD005'),
+('N0058', 'Level_Design', 20, 1, 'ETD009', 'LKD002'),
+('N0059', 'examenF2', 20, 1, 'ETD009', 'LKD001'),
+('N0060', 'SQL_BOM', 20, 1, 'ETD009', 'LKD003');
 
 -- --------------------------------------------------------
 

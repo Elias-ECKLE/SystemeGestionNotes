@@ -92,7 +92,7 @@
 														foreach ($arrayNotesMoyenne as $key => $value) {
 															
 															if($arrayIntitulesMatiere[$i]['matiere']==$value['matiere']){
-																echo $value['moyenneNotes'];
+																echo round($value['moyenneNotes'],1);
 																echo "<br/>";
 															}
 														}
@@ -147,6 +147,7 @@
 	           	  				 $sth2->bindValue('numEtudiant', $newNum);
 	      	  	  				 $sth2->execute();
 	           					 $nomPrenomUtilisateur= $sth2->fetchAll();
+
 
 				   				//requete  des notes de chaque étudiant :
 				   				 $sth3 = $conn->prepare("SELECT matiere.libelleMatiere as matiere, note.sujetNote as sujetNote, note.valeurNote as note, note.coeffNote as coeffNote
@@ -266,6 +267,37 @@
 <?php
 		if($estProfilProfesseur){
 ?>
+
+
+	<section>
+		<div id="divFormFiltrageEtudiant">
+			<form method="POST" action=#>
+				<fieldset>
+					<legend>Rechercher un étudiant :</legend>
+
+					<select id="selectMailRecherche" name="selectMailRecherche" required>
+						<option selected value=''>Sélectionner un étudiant</option>
+						<?php
+							for($i=0;$i<$lastSuffixeNum;$i++){
+								echo "<option  value=".$arrayMailsEtudiants[$i]['mail'].">".$arrayMailsEtudiants[$i]['mail']."</option>";
+							}
+						?>
+					</select>
+					<select id="selectMatiereRecherche" name="selectMatiereRecherche">
+						<option selected value=''>Sélectionner une matière</option>
+						<?php
+							for($i=0;$i<$nbMatieres;$i++){
+								echo "<option value=".$arrayIntitulesMatiere[$i]['matiere'].">".$arrayIntitulesMatiere[$i]['matiere']."</option>";
+							}
+						?>
+					</select>
+					<br/>
+					<center><input type="submit" id="boutonSubmit_FiltrageEtudiant" name="boutonSubmit_FiltrageEtudiant"></center>
+				</fieldset>
+			</form>
+		</div>	
+	</section>
+
 	<section>
 		<div id="divFormAjoutNotes">
 			<form method="POST" action=#>
@@ -293,6 +325,27 @@
 				</fieldset>
 			</form>
 		</div>	
+	</section>
+
+
+
+	<section>
+		<div id="erreurValidAjoutNote">
+
+			<?php
+
+				if(isset($_POST['boutonSubmit_AjoutNotes'])){
+					if($sujetNoteEstExistant){
+						 erreurAjoutNote();
+					}
+					else if(!$sujetNoteEstExistant){
+						 validationAjoutNote();
+					}	
+				}
+
+			?>
+			
+		</div>
 	</section>
 
 	<?php

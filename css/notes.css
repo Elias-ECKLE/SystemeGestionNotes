@@ -149,6 +149,27 @@
 
 
 
+#divFormFiltrageEtudiant {
+	width:50%;
+	margin-left: auto;
+	margin-right:auto;
+	display: flex;
+	justify-content: center;
+	margin-bottom:3%;
+}
+#divFormFiltrageEtudiant fieldset{
+
+	border-color : black;
+}
+#divFormFiltrageEtudiant #boutonSubmit_FiltrageEtudiant{
+	margin-top:2%;
+}
+
+
+
+
+
+
 #divFormAjoutNotes {
 	width:50%;
 	margin-left: auto;
@@ -170,7 +191,13 @@
 
 
 
-
+#erreurValidAjoutNote{
+	width:45%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	margin-top:2%;
+}
 
 
 

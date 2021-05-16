@@ -8,7 +8,7 @@
 		$mailUtilisateur=$_SESSION["mailUtilisateur"];
 		$estProfilEtudiant=false;
 		$estProfilProfesseur=false;
-
+		$sujetNoteEstExistant=false;
 
 
 
@@ -78,6 +78,8 @@
 	      	$sth2->execute();
 	        $nomPrenomUtilisateur= $sth2->fetchAll();
 	        $estProfilEtudiant=true;
+
+
 
 
 
@@ -156,7 +158,6 @@
 	      	  	   $sth2->execute();
 	           	   $nomPrenomUtilisateur= $sth2->fetchAll();
 	           	   $estProfilProfesseur=true;
-
 
 
 	           	   //on va chercher les notes et inofs de chaque etudiant et les mettre dans un tableau afn de les afficher les uns à la suite dans la page
@@ -247,7 +248,6 @@
 	              					$arrayNumMatiere=$sth6->fetchAll();
 	              					$numMatiere=$arrayNumMatiere[0]['numMatiere'];
 
-	              					var_dump($numMatiere);
 	              					
 
 	              					//on cherche le code etudiant correspondant à l'adresse mail :
@@ -258,7 +258,7 @@
 	            					$sth7->execute();
 	              					$arrayNumEtudiant=$sth7->fetchAll();
 	              					$numEtudiant=$arrayNumEtudiant[0]['numEtudiant'];
-	              					var_dump($numEtudiant);
+	              				
 
 
 	              					//on cherche le code de la dernière note pour l'incrémenter
@@ -287,6 +287,7 @@
         
 
 	              				}
+	              				
 
 
 
@@ -296,6 +297,22 @@
               			}
 
               		}
+
+
+              		//ON VERIFIE SI LE FOMR EST ENVOYE ET BIEN REMPLI POUR FILTRER LES ETUDIANTS :------------------------------------------------------------------------------
+              		if(isset($_POST['boutonSubmit_FiltrageEtudiant'])){
+
+
+              			if(!empty($_POST['selectMailRecherche']) && !empty($_POST['selectMatiereRecherche'])){
+
+              				echo "<script> console.log('recherche étudiant lancée')</script>";
+              				$mailFiltrage=$_POST['selectMailRecherche'];
+              				$matiereFiltrage=$_POST['selectMatiereRecherche'];
+
+              			}
+              		}
+
+
 
 
 
@@ -376,7 +393,16 @@ function primaryKeyIncrmt($lastNum){
     
 
     return $newNum;
+}
 
+function erreurAjoutNote(){
+
+	echo "<script> erreurAjoutNote(document.getElementById('inputSujetNote'),document.getElementById('erreurValidAjoutNote'))  </script>";
+}
+
+function validationAjoutNote(){
+
+	echo "<script> validationAjoutNote(document.getElementById('erreurValidAjoutNote'))  </script>";
 }
 
 
