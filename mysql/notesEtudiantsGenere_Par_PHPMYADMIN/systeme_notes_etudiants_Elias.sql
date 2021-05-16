@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `systeme_notes_etudiants2`
+-- Base de données : `systeme_notes_etudiants_Elias`
 --
 
 -- --------------------------------------------------------
