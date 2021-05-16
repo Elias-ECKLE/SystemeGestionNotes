@@ -8,3 +8,6 @@
 /!\ Attention pour que le code php puisse faire la connexion avec la base de données, il faut impérativement que celle-ci soit crée avec l'intitulé suivant : 
  "systeme_notes_etudiants_Elias" 
  
+ /!\Une fois sur la page de login, il faut utiliser une adresse mail existante (et le mot de passe associé) que vous trouverez dans la table "login" de la base de données. 
+ Sans cela, il est impossible de se connecter à moins de créer un nouveau compte sur la page inscription.php
+ 
