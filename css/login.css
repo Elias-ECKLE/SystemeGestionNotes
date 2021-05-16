@@ -1,0 +1,119 @@
+
+/*section digit*/
+
+#section_Digit{
+
+	border-style: solid;
+
+	width: 25%;
+	height: 30vh;
+
+	margin-left: auto;
+	margin-right: auto;
+	margin-top:12%;
+	margin-bottom:12%;
+}
+
+#section_Digit article{
+
+	border-bottom: solid;
+}
+#section_Digit #article_ChpLoginMDP input{
+	text-align:center;
+}
+
+
+
+
+
+/*case login et mdp*/
+#section_Digit article:first-child{
+
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height:10%;
+}
+#section_Digit article:first-child div{
+	text-align: center;
+}
+#div_login{
+	width:50%;
+}
+#div_MDP{
+	width:50%;
+}
+
+
+
+#section_Digit article:nth-child(2){
+
+	width:100%;
+	height: 50%;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:12%;
+	margin-bottom:25%;
+
+	border-style:none;
+	display: flex;
+
+	justify-content: center;
+	align-items: center;
+}
+
+
+#section_Digit article:nth-child(2) form{
+
+	display: flex;
+
+	justify-content: center;
+	align-items: center;
+	height:100%;
+	width:100%;
+}
+
+#section_Digit article:nth-child(2) div{
+	
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+#section_Digit article:nth-child(2) input{
+
+	border-radius: 25px;
+
+
+	width:85%;
+	height: 20%;
+
+}
+
+
+#section_Digit #divAffichageErreurs{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width:100%;
+	height:20%;
+
+
+}
+
+
+#divInscription{
+
+	text-decoration: none;
+	text-align: center;
+	margin-bottom: 5%;
+}
+
+
+
+
+
+

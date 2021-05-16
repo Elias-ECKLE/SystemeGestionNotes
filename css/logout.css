@@ -1,0 +1,19 @@
+
+
+#sectionLogOut div{
+
+	width:50%;
+	margin-left:auto;
+	margin-right:auto;
+	display: flex;
+	justify-content: 	center;	
+
+	margin-top:20%;
+	margin-bottom: 20%;
+
+}
+#sectionLogOut #divBoutonSubmit input{
+
+	border-radius: 10px;
+	
+}

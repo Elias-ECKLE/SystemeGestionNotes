@@ -1,0 +1,357 @@
+
+/*background page:*/
+body{
+
+ /*background-image: url("images/background/arrierePlan.jpg");*/ 
+ background-repeat: no-repeat; 
+ background-attachment: fixed; 
+ background-size: 1600px 1500px;
+}
+
+
+
+
+/*header______________________________________________________________________________________________________________________
+/*enleve les espaces avec la page*/
+body{
+	margin:0;
+	padding:0;
+}
+
+/*---------------------------------------------------------------------*/
+header{
+	background-color:black;
+	height:3.5vh;
+	padding:6px;
+
+	display: flex;
+	justify-content: space-between;
+}
+header #div1_header{
+	width:55%;
+	display: flex;
+	align-items: center;
+}
+header #div2_header{
+	width:35%;
+}
+
+
+
+header a{
+	color:white;
+	text-decoration: none;
+	opacity: 70%;
+}
+header #div1_header a{
+	font-size:90%;
+	margin-left: 20%;
+}
+header #div2_header a{ /*décalage entre chaque image resuea sociaux*/
+	margin-left: 9%;
+}
+#div2_header a img{ /*taille des images réseaux sociaux*/
+	width:4.5%;
+	height:90%;
+}
+		/*feedback visuel*/
+
+header a:hover{
+	opacity: 100%;
+
+
+}
+
+
+
+
+
+
+/*-------------------------------------------------------------------*/
+
+
+
+
+
+
+
+/*footer______________________________________________________________________________________________________________________*/
+
+
+
+
+footer{
+	
+}
+
+
+footer p{
+	color: white;
+}
+
+/*enleve les espaces avec la page*/
+body{
+	margin:0;
+	padding:0;
+}
+
+/*---------------------------------------------------------------------*/
+footer {
+	background-color:black;
+	height:24vh;
+}
+footer #divFlex{
+	display: flex;
+	padding-top:40px;
+	align-items: center;
+}
+footer #div1_footer{
+	width:65%;
+	margin-left: 70px;
+
+}
+footer #div2_footer{
+	width:35%;
+}
+
+
+footer a{
+	color:white;
+	text-decoration: none;
+	opacity: 70%;
+}
+footer #div1_footer a{
+	font-size:62.5%;
+	padding: 5%;
+}
+footer #div2_footer a{ /*décalage entre chaque image resuea sociaux*/
+	margin-left: 9%;
+}
+#div2_footer a img{ /*taille des images réseaux sociaux*/
+	width:5%;
+	height:90%;
+}
+
+
+
+
+
+footer #copyright{
+
+	margin-top: 5%;
+	margin-left:45%;
+	opacity: 80%;
+}
+
+
+					/*feedback visuel*/
+			footer a:hover{
+				opacity: 100%;
+
+
+			}
+
+
+
+
+/*-------------------------------------------------------------------*/
+
+
+
+
+
+
+
+/*media queries_______________________________________________________________________________________________*/
+
+
+
+
+@media screen  and (max-width: 1600px){ /* config pour pc entre 13 et 17 pouces*/
+
+	/*Header-------------------------------*/
+
+	header #div1_header a{ /*taille du texte*/
+		font-size:80%;
+		margin-left: 20%;
+ 	}
+	header #div2_header a img{ /*taille des images réseaux sociaux*/
+		width:5%;
+		height:90%;
+ 	}
+
+
+
+
+
+}
+
+
+
+
+
+
+@media screen and (max-width:1024px){ /* config pour tablette allant jusqu'à 13 pouces
+
+ /*Header-------------------------------*/
+	 header{
+	 	height:7vh;
+	 	flex-wrap: wrap;
+ 	}
+
+ 	 header #div1_header{ /*mettre des div de 100% pour aller à la ligne avec flex wrap*/
+ 	 	width:100%;
+ 	 	margin:0;
+ 	 	margin-bottom: 1vh;
+ 	 	font-size: 77%;
+ 	 	display: flex;
+ 	}
+ 	 header #div2_header{
+ 	 	width:100%;
+ 	 	display: flex;
+ 	 	justify-content: center;
+
+ 	}
+
+ 	header #div1_header a{
+ 		margin: auto;
+ 	}
+ 	header #div2_header a{ /*gegler police, taille img ect...*/
+ 		margin: 0;
+ 		width:5%;
+ 		padding: 10px;
+ 	}
+ 	header #div2_header a img{/* redefinir taille des images*/
+ 		width: 40%;
+ 		height:80%;
+ 	}
+
+
+
+ 	/*footer-----------------------------------*/
+
+
+ 	   footer #divFlex{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	}
+
+	footer #div1_footer{
+	width:100%;
+	
+
+
+	}
+	footer #div2_footer{
+		margin-top:5.5%;
+	}
+
+	footer #div1_footer a{
+	font-size:58%;
+	padding: 5.6%;
+   }
+
+   footer #div2_footer a{ /*décalage entre chaque image resuea sociaux*/
+
+	margin-left: 10%;
+	}
+
+	footer #copyright{
+
+	margin-top: 3.5%;
+	margin-left:41%;
+	opacity: 80%;
+	}
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 600px){ /* config pour smartphone, 7 pouces */
+
+/*header--------------------------------*/
+	header{
+		height:11vh;
+	}
+	header #div1_header{
+		display: flex;
+		flex-wrap: wrap; /*mise en place d'un flexbox pour mettre à la ligne chaque mot */
+		height: 39px;
+
+
+	}
+	header #div1_header a{
+		font-size:65%; 
+
+		width:100%; /*avec le flex wrap, on met une taille de 100% par bloc de mot */
+		margin-right: 25%;
+		margin-left:25%;
+		margin-bottom:1%;
+		text-align: center;
+
+	}
+	 	header #div2_header a img{/* redefinir taille des images*/
+ 		width: 45%;
+ 		height:60%;
+ 	}
+
+
+
+/*footer-----------------------------------*/
+
+ 	footer{
+		height: 35vh;
+	}
+
+
+	footer #divFlex{
+	   display: flex;
+	   padding-top:40px;
+	   justify-content: center;
+	   align-items: center;
+    }
+
+
+
+    footer #div1_footer {
+	   margin-left: 0px;
+	   flex-direction: row-reverse;
+	}
+	footer #div2_footer{
+	   width:100%;
+    }
+
+
+
+
+	footer #div1_footer a{
+		display: block;
+	    text-align: center;
+	    padding: 1%;
+	 
+	}
+	footer #div2_footer a{ /*décalage entre chaque image resuea sociaux*/
+	    margin-left: 10%;
+    }
+
+
+	#div2_footer a img{ /*taille des images réseaux sociaux*/
+	   width:3.5%;
+	   height:90%;
+    }
+
+
+    footer #copyright{
+
+	   margin-top: 10%;
+	   margin-left:33.5%;
+	   opacity: 80%;
+    }
+
+
+}
+

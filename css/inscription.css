@@ -1,0 +1,73 @@
+
+
+form{
+	width:50%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top:3%;
+	margin-bottom: 6%;
+}
+label{
+	font-size:1em;
+}
+
+form div{
+	margin-top:5%;
+	margin-bottom:5%;
+	margin-left:7.5%;
+	margin-right:7.5%;
+	width:85%;
+}	
+
+form .inputTaillePleine{
+	margin-top:1%;
+	margin-bottom: 3%;
+	width:100%;
+	height: 4vh;
+
+}
+
+
+form #divLabel_profil{
+	display: flex;
+	justify-content: center;
+	margin-bottom: 2px;
+	margin-top:2%;
+
+}
+form #divInput_profil{
+		display: flex;
+	justify-content: center;
+		margin-top:2%;
+}
+
+
+
+
+
+
+form #divSubmit{
+	display: flex;
+	justify-content: center;
+	margin-top:7%;
+}
+form #divSubmit input{
+	border-style: solid;
+	border-radius: 20px;
+	width:30%;
+	opacity: 70%;
+}
+form #divSubmit input:hover{
+	opacity: 100%;
+}
+
+
+
+
+form #divAffichageErreurs{
+
+	width:50%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
