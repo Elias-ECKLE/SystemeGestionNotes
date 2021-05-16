@@ -9,7 +9,7 @@
  "systeme_notes_etudiants_Elias" 
  
  
- ----------------------------Dans le site web :------------------------------------------------------------------------------------------------------------------------------------------
+ ----------------------------Dans le site web :----------------------------------------------------------------------------
  /!\Lorsque vous arriverez sur la page de login, il faut utiliser une adresse mail existante (et le mot de passe associé) que vous trouverez dans la table "login" de la base de données. 
  Sans cela, il est impossible de se connecter à moins de créer un nouveau compte sur la page inscription.php
  
